@@ -1,3 +1,5 @@
 opencv-cuda
 venv
 __pycache__
+protos/*.py
+videos
