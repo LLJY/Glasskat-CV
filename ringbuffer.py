@@ -26,9 +26,8 @@ class RingBuffer:
         # for JVM, trigger GC here to avoid taking up a lot of ram
 
     # cur is the current
-
     def next(self, idx):
         # if the distance from the current index
-        if idx > self.max_Size - self.cur:
+        if idx >= (self.max_Size - self.cur):
             return self.data[(idx + self.cur) - self.max_Size]
         return self.data[self.cur + idx]
